@@ -1,23 +1,18 @@
 language: android
-
 sudo: false
-
 android:
   components:
   - build-tools-23.0.1
   - android-23
   - extra-android-m2repository
   - extra-android-support
-
 script:
 - "./gradlew assembleDebug"
-
 deploy:
   provider: releases
-  user: undownding
-  password:
-    secure: dYVnUBO7BGzg2YPJdYlYyWim4cLQJbDJOJF97kUl0xu0MrK2SNyHm9ysnv6+ScgPQ5O8mWiIsVp17DQZCasNczJpwQS1YfByUHwHXhyJyEMhrYB00L4JCMTdYGf6Xk5616P1+ZyxmWgjh6/1Nh3fx50BHMbqx8h43ilJZcu+OPNvJuOGvFVLP8BBE0iw/DCYyt9AeuV6jLbaYXg8d2qw2Xortvu7MG58axiR/+CDkprFaDn/mtaw/QM5gS4qTHPEZ3kwKEzI6LqGbYP1NnX2b0R/oopKEluaJyWTovzdmbidTHcMXQe5z8ibhhm+fjFWcFpMS80n9PsAKsxm01hiTC3WYNWBCgUg9ZFJxeL06phusC5fNzpG8fCYIt6q4h+FqNW2fpBG0qMK0+60kV5DAG8sRd1H7fuW3chP8GFDJYiAnvO9n5gT55uRExLi8Qui6n5jdEpnL25o7EJwVxjyAR1PmMbKRUltwpu0Jj0S0DhvebZnetyXgRzCil1aJAz2csdCXjshuuUIBsr4rh9X9c/buZInvUyRIdWYXFBi+l9bzMFUdwqJH8/K+6dQDxVRIyM18C8Onvpmp/1ath0t8Y+9yBBiFp1uWWCUIvoA7lY9sKyXh/b7a01r3G7i8KzSzyOdg2iM36jmzDnhOJAfhdNk9kKylOpN2mp2y931amU=
   file: app/build/outputs/apk/app-debug.apk
   skip_cleanup: true
   on:
     tags: true
+  api_key:
+    secure: J/7XDVM6U+0XRbCFKlzBD6KVT268ChxjXTjm/++ILIwfTZfrhL4yEXAKetmfVF9ws8/yvzoAH+ULQZoeM+jR1qJH7YS4ExlbQit0oJjYySJjWjD8WGkoPR83KL6Aakki7ft1wcLwsj3nXRZIBOmDcTnAWJmLzJUXz7KQkTtHU8hmIj72IzTTQMZosR4gT4AaKjCWBA9khPpuNczbKpM3HVQA6bwDDbWwTfx0iV8vtXSneSoQw8fYEoAiTYTfjmUmcyHl8pGXQJake6V5w8GVmz5fS3UBgQKlnTl/kXdk7/iQ8XWcS+XY3fR/Myjv1GsPtOLODMvenW9pA1S7VWEkVS7zqHvms7REEizn7bxeHD2EJxeOw/nNmfzdHjV7MjJz8+dHl9F6CyhiPMmvIYiJ5NUOstS80QGszkgHq0oMs6BM5vvngkL/IeuF2IasoEfhnVGMqgdIMaOLSyr4YMcMFaz3ZO5hU+F04Q69U6izShdPO48scX8Us2PT9p269Ixo3vhS28STAQKc4P6iQmHl1rro7ic/eRNwLsXVSLQIeI9MumRbJcAmxKxVZ1tGxBk6JwkJqgkjqqW0sr/DSxtmZsdgTX8A6R47Ojpw35BGdETN4L3rdwYHrkXH9B3cc3lCFQUbut/2tOlcmB4oRAPiN/aqjbgyE6g9LQFilgla4TM=
