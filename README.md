@@ -1,7 +1,7 @@
 # Magi-Android
 Android client for http://magi.io
 
-![build status](https://travis-ci.org/undownding/magi-android.svg?branch=master)
+![build status](https://api.travis-ci.org/undownding/magi-android.svg?branch=0.1)
 
 
 What's Magi.IO : http://v.youku.com/v_show/id_XODIwMzU1NDY4.html
