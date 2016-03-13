@@ -1,0 +1,23 @@
+language: android
+
+sudo: false
+
+android:
+  components:
+  - build-tools-23.0.2
+  - android-23
+  - extra-android-m2repository
+  - extra-android-support
+
+script:
+- "./gradlew assembleDebug"
+
+deploy:
+  provider: releases
+  user: undownding
+  password:
+    secure: dYVnUBO7BGzg2YPJdYlYyWim4cLQJbDJOJF97kUl0xu0MrK2SNyHm9ysnv6+ScgPQ5O8mWiIsVp17DQZCasNczJpwQS1YfByUHwHXhyJyEMhrYB00L4JCMTdYGf6Xk5616P1+ZyxmWgjh6/1Nh3fx50BHMbqx8h43ilJZcu+OPNvJuOGvFVLP8BBE0iw/DCYyt9AeuV6jLbaYXg8d2qw2Xortvu7MG58axiR/+CDkprFaDn/mtaw/QM5gS4qTHPEZ3kwKEzI6LqGbYP1NnX2b0R/oopKEluaJyWTovzdmbidTHcMXQe5z8ibhhm+fjFWcFpMS80n9PsAKsxm01hiTC3WYNWBCgUg9ZFJxeL06phusC5fNzpG8fCYIt6q4h+FqNW2fpBG0qMK0+60kV5DAG8sRd1H7fuW3chP8GFDJYiAnvO9n5gT55uRExLi8Qui6n5jdEpnL25o7EJwVxjyAR1PmMbKRUltwpu0Jj0S0DhvebZnetyXgRzCil1aJAz2csdCXjshuuUIBsr4rh9X9c/buZInvUyRIdWYXFBi+l9bzMFUdwqJH8/K+6dQDxVRIyM18C8Onvpmp/1ath0t8Y+9yBBiFp1uWWCUIvoA7lY9sKyXh/b7a01r3G7i8KzSzyOdg2iM36jmzDnhOJAfhdNk9kKylOpN2mp2y931amU=
+  file: app/build/outputs/apk/app-debug.apk
+  skip_cleanup: true
+  on:
+    tags: true
